@@ -7,9 +7,11 @@
 <main>
     <section>
         <div class="container">
-            <div class="row justify-content-center align-items-center d-flex mx-auto flex-center text-center" style="height: 100vh;">
+            <div class="row justify-content-center align-items-center d-flex mx-auto flex-center"
+                 style="margin-top: 70px; margin-bottom: 70px;">
                 <div class="col-md-12 pt-5">
-                    <h1 class="mb-3 font-weight-bold mb-5 display-4">Courses Page</h1>
+                    <h1 class="mb-3 font-weight-bold mb-5 display-4 text-center">Courses Page</h1>
+                    <%- include('data/courses-content') -%>
                     <%- include('data/courses-db') -%>
                 </div>
             </div>
