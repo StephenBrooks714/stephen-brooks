@@ -1,0 +1,101 @@
+<!doctype HTML>
+<html lang="en">
+<%- include('layouts/header') -%>
+<body>
+<!--navbar-->
+<%- include('layouts/navBar') -%>
+<!--main body-->
+<main>
+    <%- include('partials/home-intro') -%>
+    <div class="container">
+
+        <!--Grid row-->
+        <div class="row mb-4 pb-2">
+
+            <!--Grid column-->
+            <div class="col-md-12">
+
+                <h3 class="h1 font-weight-bold light-blue-text text-center my-5 py-4">
+                    <span class="grey-text">Learn to build websites with</span> JavaScript.
+                </h3>
+                <div class="mb-5 row text-center justify-content-center align-items-center text-center">
+                    <div class="col-md-3 wow fadeIn mb-3">
+                        <a href="/">
+                            <i class="fas fa-tasks fa-2x blue-text"></i>
+                            <h3>Getting SetUp</h3>
+                        </a>
+                        <p>
+                            Getting Started with tools that you will need to succeed in your web development journey.
+                        </p>
+                    </div>
+                    <div class="col-md-3 wow fadeIn mb-3">
+                        <a href="/">
+                            <i class="fas fa-tools fa-2x blue-text"></i>
+                            <h3>Using Tools</h3>
+                        </a>
+                        <p>
+                            Using tools to help you while you build code and follow along with me in my available courses.
+                        </p>
+                    </div>
+                    <div class="col-md-3 wow fadeIn mb-3">
+                        <a href="/">
+                            <i class="fas fa-laptop-code fa-2x blue-text"></i>
+                            <h3>Front End</h3>
+                        </a>
+                        <p>
+                            Starting with the basic of the front end, we discover what we can do with HTMl, CSS & JavaScript.
+                        </p>
+                    </div>
+                    <div class="col-md-3 wow fadeIn mb-3">
+                        <a href="/">
+                            <i class="fas fa-database fa-2x blue-text"></i>
+                            <h3>Full Stack</h3>
+                        </a>
+                        <p>
+                            Learn the back end and put it altogether with the front end course, managing data directly.
+                        </p>
+                    </div>
+                </div>
+                <div class="row justify-content-center align-items-center mb-5">
+                    <div class="col-md-6 mb-3">
+                        <h4 class="h1">How I Teach Coding</h4>
+                        <p class="wow fadeInLeft">
+                            While many others share their own way of coding, I focus on what made it easier for me start off.
+                            There always going to be a learning curve, but the easier that it is presented to the learner, the easier
+                            it will be to add on more.
+                        </p>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <video style="width:90%; max-height: 400px"
+                                src="/assets/tutor-introduction.mp4" controls>
+                        </video>
+                    </div>
+                </div>
+                <p align="justify wow fadeIn">
+                    There are many coding boot camps available, and they offer opportunity to learn from experienced developers or tutors. What makes me different from them
+                    is that I not only show you how to code, but I also teach you about implementing SEO, caching, Node packages to
+                    make your site successful, and work through bugs in the videos. A good developer spends 75% of their time debugging code, and
+                    the remainder of the time building code. While we go through our journey together, I would use the same platforms to show how
+                    teams update their progress from start to finished. That way, each member of the team will know where you are, and can pull
+                    your latest code from a repository that keeps it safe.
+                </p>
+
+            </div>
+            <!--Grid column-->
+
+        </div>
+        <!--Grid row-->
+
+        <!-- blogs data -->
+        <%- include('data/home-blogs') -%>
+        <!-- blogs data -->
+
+    </div>
+
+</main>
+<!--main body-->
+<%- include('layouts/footer') -%>
+</body>
+<!--scripts-->
+<%- include('layouts/scripts') -%>
+</html>

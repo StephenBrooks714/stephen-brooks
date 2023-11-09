@@ -1,0 +1,87 @@
+<!--Navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top blue-gradient-rgba">
+
+    <!-- Navbar brand -->
+    <a class="navbar-brand" href="#">Navbar</a>
+
+    <!-- Collapse button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+            aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="basicExampleNav">
+
+        <!-- Links -->
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/about">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/contact">Contact</a>
+            </li>
+            <!-- Dropdown -->
+            <% if(loggedIn){ %>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">Admin Links</a>
+                    <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="/newPost">New Post</a>
+                        <a class="dropdown-item" href="/newFeature">New Feature</a>
+                        <a class="dropdown-item" href="/logout">Logout</a>
+                    </div>
+                </li>
+            <% } else { %>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">Pages</a>
+                    <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="/courses">Courses</a>
+                        <a class="dropdown-item" href="/blogs">Articles</a>
+                    </div>
+                </li>
+            <% } %>
+
+        </ul>
+        <!-- Links -->
+
+        <ul class="navbar-nav me-auto">
+            <% if(!loggedIn){ %>
+                <li class="nav-item">
+                    <a class="nav-link" href="/register">SignUp</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/login">Login</a>
+                </li>
+            <% } else { %>
+                <li class="nav-item">
+                    <a class="nav-link" href="/logout">
+                        Logout
+                    </a>
+                </li>
+            <% } %>
+            <li class="nav-item">
+                <a class="nav-link" href="https://github.com/StephenBrooks714" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://www.linkedin.com/in/stephen-brooks-067075235/" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://www.facebook.com/krammer439298/" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- Collapsible content -->
+
+</nav>
+<!--/.Navbar-->

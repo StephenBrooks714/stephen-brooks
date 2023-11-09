@@ -1,0 +1,47 @@
+<h1 class="display-4 fw-bold mb-5">Posted Articles</h1>
+<% if(blogs == "") { %>
+    <h2>No blogs posted yet</h2>
+    <% if(loggedIn){ %>
+        <p><a href="/newPost">Create</a> a new post.</p>
+    <% } %>
+<% } else { %>
+    <div class="row justify-content-center align-items-center text-center">
+        <% for(i=0; i < blogs.length; i++){ %>
+            <div class="col-md-4 zoom mb-3 hover-zoom">
+                <h2 class="h4"><%= blogs[i].title %></h2>
+
+                <!-- Button trigger modal -->
+                <a href="#" data-toggle="modal" data-target="#<%= blogs[i].summary %>">
+                    <img src="<%= blogs[i].image %>" class="img-fluid" loading="lazy" alt="<%= blogs[i].title %>">
+                </a>
+
+                <!-- Modal -->
+                <div class="modal fade" id="<%= blogs[i].summary %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                     aria-hidden="true">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel"><%= blogs[i].title %></h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <h3>Author: <%= blogs[i].userid.name %></h3>
+                                <p>
+                                    <%= blogs[i].body %>
+                                    <br><br>
+                                    Posted On <%= blogs[i].datePosted.toLocaleString() %> by <%= blogs[i].userid.name %>
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <a href="mailto:<%= blogs[i].userid.email %>" class="btn btn-primary">Email User</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <% } %>
+    </div>
+<% } %>

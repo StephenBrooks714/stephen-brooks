@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('layouts/header') -%>
+<body>
+<header>
+    <%- include('layouts/navBar') -%>
+</header>
+
+<main class="container">
+    <div class="row justify-content-center align-items-center mb-8" style="height: 90vh;">
+        <div class="col-lg-8 col-md-10 col-sm-12">
+            <h1>Login for Access</h1>
+
+            <form action="/login/user" method="post" enctype="multipart/form-data">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" name="username" id="username" class="mb-3 form-control" />
+                <label for="password" class="form-label">Password</label>
+                <input type="password" name="password" id="password" class="mb-3 form-control" />
+                <button class="btn btn-primary" type="submit">login</button>
+            </form>
+        </div>
+    </div>
+</main>
+
+<%- include('layouts/footer') -%>
+</body>
+<%- include('layouts/scripts') -%>
+</html>
